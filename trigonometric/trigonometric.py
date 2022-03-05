@@ -49,6 +49,9 @@ elif selected in [7,8]:
     x_max=1
     y_min=-PI/2
     y_max=PI/2
+    if selected==8:
+        y_min=-PI
+        y_max=PI
 else:
     x=np.arange(-10, 10 ,0.01)
     x_min=-10
