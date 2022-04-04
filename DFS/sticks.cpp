@@ -22,6 +22,7 @@ int n, m, d;
 
 void DFS(int k){
     if(k==m){
+        // 如果当前数组长度等于M
         int maxL=MIN;
         int minL=MAX;
         for(int i=0; i<k; i++){
@@ -29,6 +30,7 @@ void DFS(int k){
             if(lens[i]<minL)    minL=lens[i];
             if(lens[i]>maxL)    maxL=lens[i];
         }
+        //比较当前方案的最大最小值之差与以往两者之差的最小值
         d=min(d, maxL-minL);
         return;
     }
