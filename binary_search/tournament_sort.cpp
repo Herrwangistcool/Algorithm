@@ -8,7 +8,7 @@
 
 using namespace std;
 #include<iostream>
- 
+
 void pk(int* a, int* b, int bLen, int index, int max)
 {
 	int left = index * 2;
@@ -17,75 +17,58 @@ void pk(int* a, int* b, int bLen, int index, int max)
 	//在满二叉树中迭代地寻找与最大数比较过的数
  
 	//当找到存放最大数序号的叶子节点时将其改写为-1
-	if (left > bLen || right > bLen)
-	{
+	if (left > bLen || right > bLen){
 		b[index - 1] = -1;
 		return;
 	}
  
 	//如果左儿子是最大数则继续递归左儿子，反之递归右儿子
-	if (b[left - 1] == max)
-	{
+	if (b[left - 1] == max){
 		pk(a, b, bLen, left, max);
 	}
-	else
-	{
+	else{
 		pk(a, b, bLen, right, max);
 	}
  
-	if (a[b[left - 1] - 1] > a[b[right - 1] - 1])
-	{
+	if (a[b[left - 1] - 1] > a[b[right - 1] - 1]){
 		b[index - 1] = b[left - 1];
 	}
-	else
-	{
+	else{
 		b[index - 1] = b[right - 1];
 	}
 }
  
-int findSecond(int a[], int n)
-{
+int findSecond(int a[], int n){
 	int x = 1;
-	while (x < n)
-	{
+	while (x < n){
 		x = x << 1;
 	}
 	int* b = new int[2 * x - 1];
  
 	//将b数组中后x个元素装入1到n的标号
-	for (int i = 0; i < x; i++)
-	{
-		if (i < n)
-		{
+	for (int i = 0; i < x; i++){
+		if (i < n){
 			b[x - 1 + i] = i+1;
 		}
-		else
-		{
+		else{
 			b[x - 1 + i] = -1;
 		}
 	}
  
-	for (int i = 2 * x - 2; i > 0; i-=2)
-	{
-		if (b[i] < 0)
-		{
-			if (b[i - 1] >= 0)
-			{
+	for (int i = 2 * x - 2; i > 0; i-=2){
+		if (b[i] < 0){
+			if (b[i - 1] >= 0){
 				b[(i - 1) / 2] = b[i - 1];
 			}
-			else
-			{
+			else{
 				b[(i - 1) / 2] = -1;
 			}
 		}
-		else
-		{
-			if (a[b[i] - 1] > a[b[i - 1] - 1])
-			{
+		else{
+			if (a[b[i] - 1] > a[b[i - 1] - 1]){
 				b[(i - 1) / 2] = b[i];
 			}
-			else
-			{
+			else{
 				b[(i - 1) / 2] = b[i - 1];
 			}
 		}
@@ -99,8 +82,7 @@ int findSecond(int a[], int n)
 	return second;
 }
  
-int main(void)
-{
+int main(void){
 	int a[5] = { 1,8,22,15,3 };
 	cout << findSecond(a, 5);
 }

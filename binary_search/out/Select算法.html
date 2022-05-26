@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Select&#x7b97;&#x6cd5;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension vscode.markdown-math */
+@font-face{font-family:KaTeX_AMS;font-style:normal;font-weight:400;src:url(fonts/KaTeX_AMS-Regular.woff2) format("woff2"),url(fonts/KaTeX_AMS-Regular.woff) format("woff"),url(fonts/KaTeX_AMS-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Bold.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Regular.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Fraktur-Bold.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Bold.woff) format("woff"),url(fonts/KaTeX_Fraktur-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Fraktur-Regular.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Regular.woff) format("woff"),url(fonts/KaTeX_Fraktur-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Main-Bold.woff2) format("woff2"),url(fonts/KaTeX_Main-Bold.woff) format("woff"),url(fonts/KaTeX_Main-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Main-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Main-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Main-BoldItalic.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Main-Italic.woff2) format("woff2"),url(fonts/KaTeX_Main-Italic.woff) format("woff"),url(fonts/KaTeX_Main-Italic.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Main-Regular.woff2) format("woff2"),url(fonts/KaTeX_Main-Regular.woff) format("woff"),url(fonts/KaTeX_Main-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Math-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Math-BoldItalic.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Math-Italic.woff2) format("woff2"),url(fonts/KaTeX_Math-Italic.woff) format("woff"),url(fonts/KaTeX_Math-Italic.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:700;src:url(fonts/KaTeX_SansSerif-Bold.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Bold.woff) format("woff"),url(fonts/KaTeX_SansSerif-Bold.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:italic;font-weight:400;src:url(fonts/KaTeX_SansSerif-Italic.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Italic.woff) format("woff"),url(fonts/KaTeX_SansSerif-Italic.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:400;src:url(fonts/KaTeX_SansSerif-Regular.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Regular.woff) format("woff"),url(fonts/KaTeX_SansSerif-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Script;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Script-Regular.woff2) format("woff2"),url(fonts/KaTeX_Script-Regular.woff) format("woff"),url(fonts/KaTeX_Script-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size1;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size1-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size1-Regular.woff) format("woff"),url(fonts/KaTeX_Size1-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size2;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size2-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size2-Regular.woff) format("woff"),url(fonts/KaTeX_Size2-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size3;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size3-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size3-Regular.woff) format("woff"),url(fonts/KaTeX_Size3-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size4;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size4-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size4-Regular.woff) format("woff"),url(fonts/KaTeX_Size4-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Typewriter;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Typewriter-Regular.woff2) format("woff2"),url(fonts/KaTeX_Typewriter-Regular.woff) format("woff"),url(fonts/KaTeX_Typewriter-Regular.ttf) format("truetype")}.katex{text-rendering:auto;font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;text-indent:0}.katex *{-ms-high-contrast-adjust:none!important;border-color:currentColor}.katex .katex-version:after{content:"0.13.24"}.katex .katex-mathml{clip:rect(1px,1px,1px,1px);border:0;height:1px;overflow:hidden;padding:0;position:absolute;width:1px}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-style:italic;font-weight:700}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{border-collapse:collapse;display:inline-table;table-layout:fixed}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;position:relative;vertical-align:bottom}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;font-size:1px;min-width:2px;vertical-align:bottom;width:2px}.katex .vbox{align-items:baseline;display:inline-flex;flex-direction:column}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}.katex .thinbox{max-width:0;width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .clap,.katex .llap,.katex .rlap{position:relative;width:0}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{border:0 solid;display:inline-block;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline{border-bottom-style:dashed;display:inline-block;width:100%}.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.83333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.16666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.66666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.45666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.14666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.85714286em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.46857143em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.96285714em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.55428571em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.66666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.77777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.88888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.30444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.76444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.58333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.66666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72833333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.07333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.41666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.48611111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.55555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.44027778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.72777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.28935185em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.34722222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.40509259em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.46296296em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.52083333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20023148em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.43981481em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.24108004em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.28929605em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.33751205em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.38572806em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.43394407em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48216008em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57859209em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69431051em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.83317261em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.19961427em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.20096463em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.24115756em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.28135048em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.32154341em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.36173633em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.40192926em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.48231511em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.57877814em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.69453376em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.83360129em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{fill:currentColor;stroke:currentColor;fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;display:block;height:inherit;position:absolute;width:100%}.katex svg path{stroke:none}.katex img{border-style:none;max-height:none;max-width:none;min-height:0;min-width:0}.katex .stretchy{display:block;overflow:hidden;position:relative;width:100%}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{overflow:hidden;position:relative;width:100%}.katex .halfarrow-left{left:0;overflow:hidden;position:absolute;width:50.2%}.katex .halfarrow-right{overflow:hidden;position:absolute;right:0;width:50.2%}.katex .brace-left{left:0;overflow:hidden;position:absolute;width:25.1%}.katex .brace-center{left:25%;overflow:hidden;position:absolute;width:50%}.katex .brace-right{overflow:hidden;position:absolute;right:0;width:25.1%}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{border:.04em solid;box-sizing:border-box}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{border-right:.049em solid;border-top:.049em solid;box-sizing:border-box;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{content:"(" counter(katexEqnNo) ")";counter-increment:katexEqnNo}.katex .mml-eqn-num:before{content:"(" counter(mmlEqnNo) ")";counter-increment:mmlEqnNo}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;left:calc(50% + .3em);position:absolute;text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{padding-left:2em;text-align:left}body{counter-reset:katexEqnNo mmlEqnNo}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.katex-error {
+	color: var(--vscode-editorError-foreground);
+}
+
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="select算法">Select算法</h1>
+<ul>
+<li><a href="#select%E7%AE%97%E6%B3%95">Select算法</a>
+<ul>
+<li><a href="#%E4%B8%80%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">一、问题描述</a></li>
+<li><a href="#%E4%BA%8C%E7%AE%97%E6%B3%95%E6%80%9D%E8%B7%AF">二、算法思路</a></li>
+<li><a href="#%E4%B8%89%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4%E5%88%86%E8%A7%A3">三、算法步骤分解</a>
+<ul>
+<li><a href="#1-%E6%8E%92%E5%BA%8F%E9%83%A8%E5%88%86">1. 排序部分</a></li>
+<li><a href="#2-%E5%88%86%E6%B2%BB%E6%B3%95%E6%B1%82m">2. 分治法求m*</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9B%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90">四、复杂度分析</a></li>
+<li><a href="#%E9%99%84%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BA%8F">附：完整程序</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="一问题描述">一、问题描述</h2>
+<p>给出一组数，选第k小的数</p>
+<hr>
+<h2 id="二算法思路">二、算法思路</h2>
+<blockquote>
+<p>以S中的某个元素m* 作为标准将S划分成两个子数组S1和S2，其中S1中的元素比m* 小，<br>
+S2中的元素比m* 大。这样如果k小于等于S1的元素个数 就在S1中找第k小，如果k=S1中元素个数加1 ，<br>
+那m* 就是要找的数，如果k大于S1中元素个数加1，说明k在S2中，要在S2中找第(k-S1中元素个数-1)个数</p>
+</blockquote>
+<blockquote>
+<p>采用分治法找m*，将数组S分组，5个元素一组，共分成[n/5]组。在每组中寻找本组的中位数，<br>
+然后将这些中位数放到一个集合M中，最后在M中调用选择算法选出一个M的中位数，即我们要找的m*</p>
+</blockquote>
+<hr>
+<h2 id="三算法步骤分解">三、算法步骤分解</h2>
+<h3 id="1-排序部分">1. 排序部分</h3>
+<p>算法中寻找中位数需要排序，这里采用了归并排序来完成这一工作，具体代码如下：</p>
+<pre><code class="language-C++"><div><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">merge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a[], <span class="hljs-keyword">int</span> left, <span class="hljs-keyword">int</span> mid, <span class="hljs-keyword">int</span> right)</span></span>{
+    <span class="hljs-keyword">int</span> i,k;
+    <span class="hljs-comment">// 开一个临时数组，用来存放排序后的数组</span>
+    <span class="hljs-keyword">int</span> *tmp=(<span class="hljs-keyword">int</span> *)<span class="hljs-built_in">malloc</span>((right-left+<span class="hljs-number">1</span>)*<span class="hljs-built_in"><span class="hljs-keyword">sizeof</span></span>(<span class="hljs-keyword">int</span>));
+    <span class="hljs-comment">// 把数组一分为二，左边为[left1,left2]，右边为[right1,right2]</span>
+    <span class="hljs-keyword">int</span> left1=left;
+    <span class="hljs-keyword">int</span> left2=mid;
+    <span class="hljs-keyword">int</span> right1=mid+<span class="hljs-number">1</span>;
+    <span class="hljs-keyword">int</span> right2=right;
+    <span class="hljs-comment">// 开始排序，直到其中一个数组到达边界</span>
+    <span class="hljs-keyword">for</span>(k=<span class="hljs-number">0</span>; left1&lt;=left2 &amp;&amp; right1&lt;=right2;k++){
+        <span class="hljs-comment">// 左右两边分别丛头开始比较，哪个小，就把哪个放入临时数组</span>
+        <span class="hljs-keyword">if</span>(a[left1]&lt;=a[right1]){
+            <span class="hljs-comment">// 比较完一次，当前指针后移</span>
+            tmp[k]=a[left1++];
+        }<span class="hljs-keyword">else</span>{
+            tmp[k]=a[right1++];
+        }
+    }
+    <span class="hljs-comment">// 如果左边还有元素，则将左边的元素全部插入到临时数组中</span>
+    <span class="hljs-keyword">if</span>(left1&lt;=left2){
+        <span class="hljs-keyword">for</span>(i=left1; i&lt;=left2; i++){
+            tmp[k++]=a[i];
+        }
+    }
+    <span class="hljs-comment">// 同理，如果右边还有元素，则将右边剩下的元素全部插入到临时数组中</span>
+    <span class="hljs-keyword">if</span>(right1&lt;=right2){
+        <span class="hljs-keyword">for</span>(i=right1;i&lt;=right2;i++){
+            tmp[k++]=a[i];
+        }
+    }
+    <span class="hljs-comment">// 将临时数组的数据赋给a</span>
+    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>; i&lt;right-left; i++){
+        a[left+i]=tmp[i];
+    }
+    <span class="hljs-built_in">free</span>(tmp);
+    <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">merge_sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a[], <span class="hljs-keyword">int</span> begin, <span class="hljs-keyword">int</span> end)</span></span>{
+    <span class="hljs-keyword">int</span> mid;
+    <span class="hljs-keyword">if</span>(begin&lt;end){
+        <span class="hljs-comment">// 递归调用归并排序</span>
+        mid=(end+begin)/<span class="hljs-number">2</span>;
+        <span class="hljs-built_in">merge_sort</span>(a,begin,mid);
+        <span class="hljs-built_in">merge_sort</span>(a,mid+<span class="hljs-number">1</span>,end);
+        <span class="hljs-built_in">merge</span>(a,begin,mid,end);
+    }
+    <span class="hljs-keyword">return</span>;
+}
+</div></code></pre>
+<p>另外说明一下，虽然归并排序的思想比较容易理解，但实际从头写起的话还是很耗费时间，我这里的代码也是参考了别人的贴子。</p>
+<h3 id="2-分治法求m">2. 分治法求m*</h3>
+<ul>
+<li>将数组划分成5个一组，每组中位数存入中位数数组m里</li>
+</ul>
+<pre><code class="language-C++"><div><span class="hljs-keyword">int</span> s=n/<span class="hljs-number">5</span>;  <span class="hljs-comment">//5个数一组，共s组</span>
+<span class="hljs-keyword">int</span> *m=<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[s];  <span class="hljs-comment">//中位数数组</span>
+<span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>; i&lt;s; i++){
+  <span class="hljs-built_in">merge_sort</span>(a,left+i*<span class="hljs-number">5</span>,left+i*<span class="hljs-number">5</span>+<span class="hljs-number">5</span><span class="hljs-number">-1</span>);    <span class="hljs-comment">//5个分为一组进行排序</span>
+   m[i]=a[left+i*<span class="hljs-number">5</span>+<span class="hljs-number">2</span>]; <span class="hljs-comment">//每组中位数存入中位数数组m里</span>
+}
+</div></code></pre>
+<ul>
+<li>中位数数组排序，选出数组m中的中位数mid</li>
+</ul>
+<pre><code class="language-C++"><div><span class="hljs-built_in">merge_sort</span>(m,<span class="hljs-number">0</span>,i<span class="hljs-number">-1</span>);    <span class="hljs-comment">//将中位数数组进行排序</span>
+<span class="hljs-keyword">int</span> mid=m[i/<span class="hljs-number">2</span>];
+</div></code></pre>
+<ul>
+<li>创建3个数组，分别存放比mid小的，和mid相等的，比mid大的</li>
+</ul>
+<pre><code class="language-C++"><div><span class="hljs-comment">/*创建3个数组，并定义他们的初始下标num1,num2,num3*/</span>
+<span class="hljs-keyword">int</span> *a1=<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+<span class="hljs-keyword">int</span> *a2=<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+<span class="hljs-keyword">int</span> *a3=<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+<span class="hljs-keyword">int</span> num1=<span class="hljs-number">0</span>, num2=<span class="hljs-number">0</span>, num3=<span class="hljs-number">0</span>;
+
+<span class="hljs-comment">/*分别与mid比较，确定放入哪个数组*/</span>
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=left; i&lt;right; i++){
+    <span class="hljs-keyword">if</span>(a[i]&lt;mid){
+        a1[num1++]=a[i];
+    }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a[i]==mid){
+        a2[num2++]=a[i];
+    }<span class="hljs-keyword">else</span>{
+        a3[num3++]=a[i];
+    }
+}
+</div></code></pre>
+<ul>
+<li>将k与上面三个数组中的元素个数进行比较，确定子问题的范围</li>
+</ul>
+<pre><code class="language-C++"><div><span class="hljs-keyword">if</span>(num1&gt;=k){
+    <span class="hljs-comment">// 若第k小于num1，说明k值在num1中，继续递归select</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">select</span>(a1,<span class="hljs-number">0</span>,num1,k);
+}
+<span class="hljs-keyword">if</span>(num1+num2&gt;=k){
+    <span class="hljs-comment">// 若k在num1和num1+num2之间，k值只可能刚好是mid</span>
+    <span class="hljs-keyword">return</span> mid;
+}<span class="hljs-keyword">else</span>{
+    <span class="hljs-comment">// 当k大于num1+num2说明，此时的子问题转变成了在S2中找第(k-S1中元素个数-1)个数</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">select</span>(a3,<span class="hljs-number">0</span>,num3,k-num1-num2);
+}
+</div></code></pre>
+<hr>
+<h2 id="四复杂度分析">四、复杂度分析</h2>
+<ul>
+<li>假设n是5的倍数，且n/5是奇数，即n/5=2r+1，于是得到|A|+|D|=2r，|B|=|C|=3r+2, n=10r+5<br>
+注此处的|A|,|B|,|C|,|D|指的是被m*分隔开的四个区域</li>
+<li>如果A和D的元素都小于m* ，那么它们的元素都加入到S1中，且下一步算法又在这个最大的子问题上进行递归调用，<br>
+这对应了归约后子问题规模的上限，正好是算法时间复杂度分析的最坏情况。此时的子问题大小是<br>
+|A|+|D|+|C|=7r+2=<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>7</mn><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>5</mn><mo stretchy="false">)</mo></mrow><mn>10</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{7(n-5)}{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">10</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">7</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">5</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>+2=<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>7</mn><mi>n</mi></mrow><mn>10</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{7n}{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">10</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">7</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>-1.5&lt;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mn>7</mn><mi>n</mi></mrow><mn>10</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{7n}{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">10</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">7</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li>上述式子表明问题规模不超过原问题规模的7/10.根据这个关系可以推出最坏情况下的时间复杂度递推式<br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>≤</mo><mi>W</mi><mo stretchy="false">(</mo><mfrac><mi>n</mi><mn>5</mn></mfrac><mo stretchy="false">)</mo><mo>+</mo><mi>W</mi><mo stretchy="false">(</mo><mfrac><mrow><mn>7</mn><mi>n</mi></mrow><mn>10</mn></mfrac><mo stretchy="false">)</mo><mo>+</mo><mi>t</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">W(n)\leq W(\frac{n}{5})+W(\frac{7n}{10})+tn</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.095em;vertical-align:-0.345em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">5</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">10</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">7</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6151em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal">n</span></span></span></span></li>
+<li>方程右边的第一项是算法递归调用找m* 的时间，此时子问题的规模是n/5，第二项是递归求解子问题的代价，<br>
+而子问题的最大规模不超过7n/10，剩下的tn是算法在构造m数组和跟mid比较大小的时间，这里的t是某个常数。</li>
+<li>根据该方程的递归树，得到
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>≤</mo><mi>t</mi><mi>n</mi><mo>+</mo><mn>0.9</mn><mi>t</mi><mi>n</mi><mo>+</mo><mn>0.</mn><msup><mn>9</mn><mn>0.2</mn></msup><mi>t</mi><mi>n</mi><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo>=</mo><mi>t</mi><mi>n</mi><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>0.9</mn><mo>+</mo><mn>0.</mn><msup><mn>9</mn><mn>0.2</mn></msup><mo>+</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo stretchy="false">)</mo><mo>=</mo><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">W(n)\leq tn+0.9tn+0.9^{0.2}tn+...=tn(1+0.9+0.9^{0.2}+...)=O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6984em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">0.9</span><span class="mord mathnormal">t</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord">0.</span><span class="mord"><span class="mord">9</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0.2</span></span></span></span></span></span></span></span></span><span class="mord mathnormal">t</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mord">...</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">0.9</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord">0.</span><span class="mord"><span class="mord">9</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0.2</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">...</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span><br>
+注：该递归方程树见算法设计与分析(屈婉玲等编著 第二版)第44页的图2.6</li>
+</ul>
+<hr>
+<h2 id="附完整程序">附：完整程序</h2>
+<p>以下是完整的代码，也可以在文件夹中找到名为merge_sort.cpp的文件，里面也有源码</p>
+<pre><code class="language-C++"><div><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">merge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a[], <span class="hljs-keyword">int</span> left, <span class="hljs-keyword">int</span> mid, <span class="hljs-keyword">int</span> right)</span></span>{
+    <span class="hljs-keyword">int</span> i,k;
+    <span class="hljs-comment">// 开一个临时数组，用来存放排序后的数组</span>
+    <span class="hljs-keyword">int</span> *tmp=(<span class="hljs-keyword">int</span> *)<span class="hljs-built_in">malloc</span>((right-left+<span class="hljs-number">1</span>)*<span class="hljs-built_in"><span class="hljs-keyword">sizeof</span></span>(<span class="hljs-keyword">int</span>));
+    <span class="hljs-comment">// 把数组一分为二，左边为[left1,left2]，右边为[right1,right2]</span>
+    <span class="hljs-keyword">int</span> left1=left;
+    <span class="hljs-keyword">int</span> left2=mid;
+    <span class="hljs-keyword">int</span> right1=mid+<span class="hljs-number">1</span>;
+    <span class="hljs-keyword">int</span> right2=right;
+    <span class="hljs-comment">// 开始排序，直到其中一个数组到达边界</span>
+    <span class="hljs-keyword">for</span>(k=<span class="hljs-number">0</span>; left1&lt;=left2 &amp;&amp; right1&lt;=right2;k++){
+        <span class="hljs-comment">// 左右两边分别丛头开始比较，哪个小，就把哪个放入临时数组</span>
+        <span class="hljs-keyword">if</span>(a[left1]&lt;=a[right1]){
+            <span class="hljs-comment">// 比较完一次，当前指针后移</span>
+            tmp[k]=a[left1++];
+        }<span class="hljs-keyword">else</span>{
+            tmp[k]=a[right1++];
+        }
+    }
+    <span class="hljs-comment">// 如果左边还有元素，则将左边的元素全部插入到临时数组中</span>
+    <span class="hljs-keyword">if</span>(left1&lt;=left2){
+        <span class="hljs-keyword">for</span>(i=left1; i&lt;=left2; i++){
+            tmp[k++]=a[i];
+        }
+    }
+    <span class="hljs-comment">// 同理，如果右边还有元素，则将右边剩下的元素全部插入到临时数组中</span>
+    <span class="hljs-keyword">if</span>(right1&lt;=right2){
+        <span class="hljs-keyword">for</span>(i=right1;i&lt;=right2;i++){
+            tmp[k++]=a[i];
+        }
+    }
+    <span class="hljs-comment">// 将临时数组的数据赋给a</span>
+    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>; i&lt;right-left; i++){
+        a[left+i]=tmp[i];
+    }
+    <span class="hljs-built_in">free</span>(tmp);
+    <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">merge_sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a[], <span class="hljs-keyword">int</span> begin, <span class="hljs-keyword">int</span> end)</span></span>{
+    <span class="hljs-keyword">int</span> mid;
+    <span class="hljs-keyword">if</span>(begin&lt;end){
+        <span class="hljs-comment">// 存疑</span>
+        mid=(end+begin)/<span class="hljs-number">2</span>;
+        <span class="hljs-built_in">merge_sort</span>(a,begin,mid);
+        <span class="hljs-built_in">merge_sort</span>(a,mid+<span class="hljs-number">1</span>,end);
+        <span class="hljs-built_in">merge</span>(a,begin,mid,end);
+    }
+    <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">select</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a[], <span class="hljs-keyword">int</span> left, <span class="hljs-keyword">int</span> right, <span class="hljs-keyword">int</span> k)</span></span>{
+    <span class="hljs-keyword">int</span> n=right-left;
+    <span class="hljs-keyword">if</span>(n&lt;<span class="hljs-number">5</span>){
+        <span class="hljs-comment">// 若少于5个不用分组直接二分归并后输出中位数</span>
+        <span class="hljs-built_in">merge_sort</span>(a,left,right<span class="hljs-number">-1</span>);
+    }
+    <span class="hljs-keyword">int</span> i;
+    <span class="hljs-keyword">int</span> s=n/<span class="hljs-number">5</span>;  <span class="hljs-comment">//5个数一组，共s组</span>
+    <span class="hljs-keyword">int</span> *m=<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[s];  <span class="hljs-comment">//中位数数组</span>
+    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>; i&lt;s; i++){
+        <span class="hljs-built_in">merge_sort</span>(a,left+i*<span class="hljs-number">5</span>,left+i*<span class="hljs-number">5</span>+<span class="hljs-number">5</span><span class="hljs-number">-1</span>);    <span class="hljs-comment">//5个分为一组进行排序</span>
+        m[i]=a[left+i*<span class="hljs-number">5</span>+<span class="hljs-number">2</span>]; <span class="hljs-comment">//每组中位数存入中位数数组m里</span>
+    }
+    <span class="hljs-built_in">merge_sort</span>(m,<span class="hljs-number">0</span>,i<span class="hljs-number">-1</span>);    <span class="hljs-comment">//将中位数数组进行排序</span>
+    <span class="hljs-keyword">int</span> mid=m[i/<span class="hljs-number">2</span>];
+    <span class="hljs-keyword">int</span> *a1=<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+    <span class="hljs-keyword">int</span> *a2=<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+    <span class="hljs-keyword">int</span> *a3=<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+    <span class="hljs-keyword">int</span> num1=<span class="hljs-number">0</span>, num2=<span class="hljs-number">0</span>, num3=<span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=left; i&lt;right; i++){
+        <span class="hljs-keyword">if</span>(a[i]&lt;mid){
+            a1[num1++]=a[i];
+        }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a[i]==mid){
+            a2[num2++]=a[i];
+        }<span class="hljs-keyword">else</span>{
+            a3[num3++]=a[i];
+        }
+    }
+    <span class="hljs-keyword">if</span>(num1&gt;=k){
+        <span class="hljs-comment">// 若第k小于num1，说明k值在num1中，继续递归select</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">select</span>(a1,<span class="hljs-number">0</span>,num1,k);
+    }
+    <span class="hljs-keyword">if</span>(num1+num2&gt;=k){
+        <span class="hljs-comment">// 若k在num1和num1+num2之间，k值只可能刚好是mid</span>
+        <span class="hljs-keyword">return</span> mid;
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-comment">// 注意，因为前面已经占据了num1+num2值，所以在mid后面的值中找k值时要剪掉num1+num2个数</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">select</span>(a3,<span class="hljs-number">0</span>,num3,k-num1-num2);
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> n;
+    <span class="hljs-keyword">int</span> k;
+    <span class="hljs-keyword">int</span> a[<span class="hljs-number">1000</span>];
+    cout&lt;&lt;<span class="hljs-string">&quot;输入数组大小: &quot;</span>;
+    cin&gt;&gt;n;
+    cout&lt;&lt;<span class="hljs-string">&quot;输入数据: &quot;</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;n; i++){
+        cin&gt;&gt;a[i];
+    }
+    cout&lt;&lt;<span class="hljs-string">&quot;输入所求的第几个元素: &quot;</span>;
+    cin&gt;&gt;k;
+    cout&lt;&lt;<span class="hljs-string">&quot;第&quot;</span>&lt;&lt;k&lt;&lt;<span class="hljs-string">&quot;小元素: &quot;</span>;
+    cout&lt;&lt;<span class="hljs-built_in">select</span>(a,<span class="hljs-number">0</span>,n,k)&lt;&lt;endl;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</div></code></pre>
+
+        <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </body>
+    </html>

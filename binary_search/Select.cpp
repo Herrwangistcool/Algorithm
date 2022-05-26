@@ -102,7 +102,7 @@ int select(int a[], int left, int right, int k){
         }
     }
     if(num1>=k){
-        // 若第k小于num1，说明k值再num1中，继续递归select
+        // 若第k小于num1，说明k值在num1中，继续递归select
         return select(a1,0,num1,k);
     }
     if(num1+num2>=k){
