@@ -7,6 +7,7 @@
 using namespace std;
 #define DBL_MAX         1.7976931348623158e+308
 const int n=5;
+//最优搜索代价
 double OPTIMAL_BST(double *p,double *q,int n,double **e,double **w,int **root)
 {
 	for(int i=1;i<=n+1;i++)
@@ -29,7 +30,7 @@ double OPTIMAL_BST(double *p,double *q,int n,double **e,double **w,int **root)
 				{
 					e[i][j]=t;
 					root[i][j]=r;
-					//cout<<root[i][j]<<"\t"<<i<<" ==============="<<j<<endl;
+					cout<<root[i][j]<<"\t"<<i<<" ==============="<<j<<endl;
 				}
 			}
 		}
